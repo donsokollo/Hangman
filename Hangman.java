@@ -200,6 +200,7 @@ public class Hangman extends ConsoleProgram {
     	if (charInWord){
     		for (int i = 0; i < word.length(); i++)
     	    	if (word.charAt(i) == guessLetter){
+    	    		println(i);
     	    		currentWordToGuess = currentWordToGuess.substring(0, i*2-2) 
     	    				+ guessLetter /*+ currentWordToGuess.substring(i)*/;
     	    	}
