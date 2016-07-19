@@ -229,14 +229,13 @@ public class Hangman extends ConsoleProgram {
      * If not takes off a life (the guess word was not proper)
      */
     private void checkIfProperGuessOfWord(){
-    	println("in checkIfProperGuessOfWord LOOP");
     	if (guessWord.equals(word)) {
     		gameWon = true;
     		println("WOOON");
     	}
     	else {
     		lives--;
-    		println("MINUS LIVES");
+    		println("You entered a wrong word");
     	}
     }
     
