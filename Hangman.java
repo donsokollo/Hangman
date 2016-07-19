@@ -118,6 +118,7 @@ public class Hangman extends ConsoleProgram {
     		throwException();
     	} else if (checkIfApproperiate().equals("Char")){
     		convertToChar();
+    		println("converts to char");
     	} else if (checkIfApproperiate().equals("Word")){
     		guessWord = currentGuessString;
     	}    	
