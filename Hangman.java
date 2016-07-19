@@ -53,6 +53,7 @@ public class Hangman extends ConsoleProgram {
 	    		promptForWord();
 	    		checkTypeOfInput();
 	    		actOnInputLetter();
+	    		if (gameWon) break;
 	    		checkIfGameOver();
 	    		printTheGuessWord();   
 	    		
