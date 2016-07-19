@@ -120,7 +120,6 @@ public class Hangman extends ConsoleProgram {
     		throwException();
     	} else if (checkIfApproperiate().equals("Char")){
     		convertToChar();
-    		println("converts to char");
     	} else if (checkIfApproperiate().equals("Word")){
     		guessWord = currentGuessString;
     	}    	
@@ -230,8 +229,15 @@ public class Hangman extends ConsoleProgram {
      * If not takes off a life (the guess word was not proper)
      */
     private void checkIfProperGuessOfWord(){
-    	if (guessWord.equals(word)) gameWon = true;
-    	else lives--;
+    	println("in checkIfProperGuessOfWord LOOP");
+    	if (guessWord.equals(word)) {
+    		gameWon = true;
+    		println("WOOON");
+    	}
+    	else {
+    		lives--;
+    		println("MINUS LIVES");
+    	}
     }
     
     /**
