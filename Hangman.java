@@ -157,7 +157,7 @@ public class Hangman extends ConsoleProgram {
      * @return "Word" if an approperiate word, "Char" if an approperiate char and "Inapproperiate" if wrong input
      */
     private String checkIfApproperiate(){
-    	if (currentGuessString.length() == 0){
+    	if (currentGuessString.length() == 1){
     		char firstChar = currentGuessString.charAt(0);
     		if (Character.isLetter(firstChar)) return "Char";
     	} else if(haveOnlyLetters()){
