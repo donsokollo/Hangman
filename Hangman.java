@@ -54,7 +54,7 @@ public class Hangman extends ConsoleProgram {
 	    		checkTypeOfInput();
 	    		if (checkIfApproperiate().equals("Char")){
 		    		putLetterInTheWord(checkIfCharInWord());
-	    		} else if (checkIfApproperiate().equals("String")){
+	    		} else if (checkIfApproperiate().equals("Word")){
 	    			checkIfProperGuessOfWord();
 	    			if (gameWon) break;
 	    		}
