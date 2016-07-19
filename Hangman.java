@@ -202,7 +202,7 @@ public class Hangman extends ConsoleProgram {
     	    	if (word.charAt(i) == guessLetter){
     	    		println(i);
     	    		currentWordToGuess = currentWordToGuess.substring(0, i*2) 
-    	    				+ guessLetter + currentWordToGuess.substring(i);
+    	    				+ guessLetter + " " + currentWordToGuess.substring(i+2);
     	    	}
     	} else if (!letterAlreadyTyped()){
     		lives--;
