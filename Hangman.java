@@ -172,6 +172,7 @@ public class Hangman extends ConsoleProgram {
     	println("Letters already used are: " + charTyped);
     	println("Lives left " + lives);
     	/*println("the word is "+ word);*/
+    	println("Current word " + currentWordToGuess);
     	currentGuessString = readLine("Please type a guess letter or a guess word ");
     	
     }
