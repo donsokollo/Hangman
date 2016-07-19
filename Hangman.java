@@ -163,8 +163,7 @@ public class Hangman extends ConsoleProgram {
     	} else if(haveOnlyLetters()){
     		return "Word";
     	} 
-    	else return "Inapproperiate";
-    	return ""; /*only for the logic of the complier*/
+    	return "Inapproperiate";
     }
  
     /**
