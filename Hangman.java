@@ -52,22 +52,34 @@ public class Hangman extends ConsoleProgram {
 	    		
 	    		promptForWord();
 	    		checkTypeOfInput();
-	    		if (checkIfApproperiate().equals("Char")){
-		    		putLetterInTheWord(checkIfCharInWord());
-	    		} else if (checkIfApproperiate().equals("Word")){
-	    			checkIfProperGuessOfWord();
-	    			if (gameWon) break;
-	    		}
-	    		printTheGuessWord();   
+	    		actOnInputLetter();
 	    		checkIfGameOver();
+	    		printTheGuessWord();   
+	    		
 	    	}
 	    	printEndStatement();
 	    	setForTheNextGame();
+	    	askIfAnotherGame();
 	    	
     	}
     }
     
+    /**
+     * If char is input, checks if it is in word and print on screen
+     * If word is put, checks if approperiate word is guessed if so, ends the game
+     * If all letters found ends the game
+     */
 
+    private void actOnInputLetter(){
+    	if (checkIfApproperiate().equals("Char")){
+    		putLetterInTheWord(checkIfCharInWord());
+    		checkIfAllLettersFound();
+    		
+		} else if (checkIfApproperiate().equals("Word")){
+			checkIfProperGuessOfWord();
+		}
+    }
+    
     /**
      * sets the parameters ready for the next game
      */
@@ -77,6 +89,7 @@ public class Hangman extends ConsoleProgram {
     	charTyped = "";
     	word = "";
     	currentWordToGuess = "";
+    	lettersLeftToGuess = 0;
     	
     }
     private void checkIfGameOver(){
@@ -87,6 +100,16 @@ public class Hangman extends ConsoleProgram {
     	
     }
     
+    private void askIfAnotherGame(){
+    	println("Do You want to have another game?");
+    	println("Yes or No?");
+    	String y = readLine("");
+    	while (!y.equals("Yes") && !y.equals("No")){
+    		y = readLine("Type Yes or No: ");
+    	}
+    	if (y.equals("Yes")) endGameRequest = true;
+    }
+    
     /**
      * picks  one word from the chosen source and places it in field word
      */
@@ -94,6 +117,7 @@ public class Hangman extends ConsoleProgram {
  
     	int pickWordNumber = rgen.nextInt(0, lexicon.getWordCount()-1);
     	word = lexicon.getWord(pickWordNumber);
+    	lettersLeftToGuess = word.length();
     }
     
     /**
@@ -194,13 +218,14 @@ public class Hangman extends ConsoleProgram {
      * Replaces the guessLetter in every place in the currentWordToGuess 
      * that it appears in the word (to guess)
      * Puts the typed char into a charTyped
+     * Reduces lettersLeftToGuess by 1
      * @param charInWord (boolean) specifies if the guessed character is in the word
      */
     private void putLetterInTheWord(boolean charInWord){
     	if (charInWord){
+    		lettersLeftToGuess--;
     		for (int i = 0; i < word.length(); i++)
     	    	if (word.charAt(i) == guessLetter){
-    	    		println(i);
     	    		currentWordToGuess = currentWordToGuess.substring(0, i*2) 
     	    				+ guessLetter + " " + currentWordToGuess.substring(i*2+2);
     	    	}
@@ -266,6 +291,10 @@ public class Hangman extends ConsoleProgram {
 		println("");
     }
     
+    private void checkIfAllLettersFound(){
+    	if (lettersLeftToGuess == 0) gameWon = true;
+    }
+    
     
     
     RandomGenerator rgen = RandomGenerator.getInstance();
@@ -282,5 +311,5 @@ public class Hangman extends ConsoleProgram {
      */
     private static String word, currentWordToGuess = "", guessWord = "", currentGuessString = "", charTyped = "";
     private static boolean endGameRequest = false, gameOver = false, gameWon=false;
-    private static int lives = LIVES_NUMBER;
+    private static int lives = LIVES_NUMBER, lettersLeftToGuess = 0;
 }
