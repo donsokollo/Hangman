@@ -114,7 +114,7 @@ public class Hangman extends ConsoleProgram {
      */
     private void checkTypeOfInput(){
 
-    	println(checkIfApproperiate().equals("Inapproperiate"));
+    	println(checkIfApproperiate().equals("Word"));
     	
     	if (checkIfApproperiate().equals("Inapproperiate")){
     		throwException();
