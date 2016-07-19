@@ -171,7 +171,7 @@ public class Hangman extends ConsoleProgram {
     private void promptForWord(){
     	println("Letters already used are: " + charTyped);
     	println("Lives left " + lives);
-    	println("the word is "+ word);
+    	/*println("the word is "+ word);*/
     	currentGuessString = readLine("Please type a guess letter or a guess word ");
     	
     }
@@ -260,7 +260,6 @@ public class Hangman extends ConsoleProgram {
      */
     private void checkIfProperGuessOfWord(){
     	if (guessWord.equals(word)) {
-    		println(checkIfApproperiate().equals("Word"));
     		gameWon = true;
     	}
     	else {
