@@ -142,7 +142,7 @@ public class Hangman extends ConsoleProgram {
      * Assign the typed word to the currentGuessString
      */
     private void promptForWord(){
-    	println("Letters already osed are"+charTyped);
+    	println("Letters already used are"+charTyped);
     	currentGuessString = readLine("Please type a guess letter or a guess word ");
     	println("the word is "+ word);
     }
