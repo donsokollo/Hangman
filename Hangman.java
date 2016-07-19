@@ -107,7 +107,7 @@ public class Hangman extends ConsoleProgram {
     	while (!y.equals("Yes") && !y.equals("No")){
     		y = readLine("Type Yes or No: ");
     	}
-    	if (y.equals("Yes")) endGameRequest = true;
+    	if (y.equals("No")) endGameRequest = true;
     }
     
     /**
