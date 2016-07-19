@@ -76,7 +76,6 @@ public class Hangman extends ConsoleProgram {
     		checkIfAllLettersFound();
     		
 		} else if (checkIfApproperiate().equals("Word")){
-			println(checkIfApproperiate().equals("Word"));
 			checkIfProperGuessOfWord();
 		}
     }
@@ -260,6 +259,7 @@ public class Hangman extends ConsoleProgram {
      */
     private void checkIfProperGuessOfWord(){
     	if (guessWord.equals(word)) {
+    		println(checkIfApproperiate().equals("Word"));
     		gameWon = true;
     	}
     	else {
