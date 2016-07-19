@@ -15,7 +15,7 @@ import java.awt.*;
 public class Hangman extends ConsoleProgram {
 
 	/** number of lives */
-	private static final int LIVES_NUMBER = 30;
+	private static final int LIVES_NUMBER = 5;
 
     public void run() {
     	lexicon = new HangmanLexicon();
@@ -142,7 +142,9 @@ public class Hangman extends ConsoleProgram {
      * Assign the typed word to the currentGuessString
      */
     private void promptForWord(){
-    	currentGuessString = readLine("Please type a guess letter or a guess word");
+    	println("Letters already osed are"+charTyped);
+    	currentGuessString = readLine("Please type a guess letter or a guess word ");
+    	println("the word is "+ word);
     }
 
     /**
@@ -235,6 +237,10 @@ public class Hangman extends ConsoleProgram {
     	println("The current state of guess is: " + currentWordToGuess);
     }
     
+    /**
+     * prints the ending statement on the screen
+     * either winning or losing one
+     */
     private void printEndStatement(){
     	if (gameOver){
     		println("You Lose");
