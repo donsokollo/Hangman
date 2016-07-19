@@ -222,10 +222,10 @@ public class Hangman extends ConsoleProgram {
      * @param charInWord (boolean) specifies if the guessed character is in the word
      */
     private void putLetterInTheWord(boolean charInWord){
-    	if (charInWord){
-    		lettersLeftToGuess--;
+    	if (charInWord){	
     		for (int i = 0; i < word.length(); i++)
     	    	if (word.charAt(i) == guessLetter){
+    	    		lettersLeftToGuess--;
     	    		currentWordToGuess = currentWordToGuess.substring(0, i*2) 
     	    				+ guessLetter + " " + currentWordToGuess.substring(i*2+2);
     	    	}
