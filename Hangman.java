@@ -198,10 +198,10 @@ public class Hangman extends ConsoleProgram {
      */
     private void putLetterInTheWord(boolean charInWord){
     	if (charInWord){
-    		for (int i = 1; i <= word.length(); i++)
+    		for (int i = 0; i < word.length(); i++)
     	    	if (word.charAt(i) == guessLetter){
     	    		currentWordToGuess = currentWordToGuess.substring(0, i*2-2) 
-    	    				+ guessLetter + currentWordToGuess.substring(i);
+    	    				+ guessLetter /*+ currentWordToGuess.substring(i)*/;
     	    	}
     	} else if (!letterAlreadyTyped()){
     		lives--;
