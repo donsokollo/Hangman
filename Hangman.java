@@ -15,7 +15,7 @@ import java.awt.*;
 public class Hangman extends ConsoleProgram {
 
 	/** number of lives */
-	private static final int LIVES_NUMBER = 5;
+	private static final int LIVES_NUMBER = 10;
 
     public void run() {
     	lexicon = new HangmanLexicon();
@@ -288,7 +288,6 @@ public class Hangman extends ConsoleProgram {
     		println("Congratulations");
     		println("YOU WON !!!!");
     	}
-    	println("To play again hit spacebar");
 		println("");
     }
     
