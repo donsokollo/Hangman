@@ -198,13 +198,15 @@ public class Hangman extends ConsoleProgram {
      */
     private void putLetterInTheWord(boolean charInWord){
     	if (charInWord){
-    		for (int i = 0; i < word.length(); i++)
+    		for (int i = 1; i <= word.length(); i++)
     	    	if (word.charAt(i) == guessLetter){
     	    		currentWordToGuess = currentWordToGuess.substring(0, i*2-2) 
     	    				+ guessLetter + currentWordToGuess.substring(i);
     	    	}
     	} else if (!letterAlreadyTyped()){
     		lives--;
+    		println("You entered a wrong character");
+    		println("");
     	}
     	charTyped+=guessLetter;
     }
@@ -231,11 +233,11 @@ public class Hangman extends ConsoleProgram {
     private void checkIfProperGuessOfWord(){
     	if (guessWord.equals(word)) {
     		gameWon = true;
-    		println("WOOON");
     	}
     	else {
     		lives--;
     		println("You entered a wrong word");
+    		println("");
     	}
     }
     
@@ -256,7 +258,7 @@ public class Hangman extends ConsoleProgram {
     		
     	} else if (gameWon){
     		println("Congratulations");
-    		println("YOU WON");
+    		println("YOU WON !!!!");
     	}
     	println("To play again hit spacebar");
 		println("");
