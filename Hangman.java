@@ -76,6 +76,7 @@ public class Hangman extends ConsoleProgram {
     		checkIfAllLettersFound();
     		
 		} else if (checkIfApproperiate().equals("Word")){
+			println(checkIfApproperiate().equals("Word"));
 			checkIfProperGuessOfWord();
 		}
     }
@@ -138,7 +139,7 @@ public class Hangman extends ConsoleProgram {
      */
     private void checkTypeOfInput(){
 
-    	println(checkIfApproperiate().equals("Word"));
+    	
     	
     	if (checkIfApproperiate().equals("Inapproperiate")){
     		throwException();
