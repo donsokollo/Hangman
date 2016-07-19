@@ -282,9 +282,11 @@ public class Hangman extends ConsoleProgram {
      */
     private void printEndStatement(){
     	if (gameOver){
+    		println("");
     		println("You Lose");
     		
     	} else if (gameWon){
+    		println("");
     		println("Congratulations");
     		println("YOU WON !!!!");
     	}
