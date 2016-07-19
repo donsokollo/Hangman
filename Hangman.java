@@ -92,7 +92,7 @@ public class Hangman extends ConsoleProgram {
      */
     private void pickOneWord(){
  
-    	int pickWordNumber = rgen.nextInt(0, lexicon.getWordCount());
+    	int pickWordNumber = rgen.nextInt(0, lexicon.getWordCount()-1);
     	word = lexicon.getWord(pickWordNumber);
     }
     
