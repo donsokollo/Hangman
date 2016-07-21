@@ -237,7 +237,7 @@ public class Hangman extends ConsoleProgram {
     		lives--;
     		println("You entered a wrong character");
     		println("");
-    		charTyped+=guessLetter;
+    		if (!letterAlreadyTypedAndWrong) charTyped+=guessLetter;
     	}
     	
     }
