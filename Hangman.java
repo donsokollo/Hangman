@@ -224,6 +224,8 @@ public class Hangman extends ConsoleProgram {
      * @param charInWord (boolean) specifies if the guessed character is in the word
      */
     private void putLetterInTheWord(boolean charInWord){
+    	
+    	boolean letterAlreadyTypedAndWrong = letterAlreadyTyped() || checkIfCharInWord();
     	if (charInWord){	
     		for (int i = 0; i < word.length(); i++)
     	    	if (word.charAt(i) == guessLetter){
@@ -231,7 +233,7 @@ public class Hangman extends ConsoleProgram {
     	    		currentWordToGuess = currentWordToGuess.substring(0, i*2) 
     	    				+ guessLetter + " " + currentWordToGuess.substring(i*2+2);
     	    	}
-    	} else if (!letterAlreadyTyped()){
+    	} else if (!letterAlreadyTyped() || letterAlreadyTypedAndWrong){
     		lives--;
     		println("You entered a wrong character");
     		println("");
