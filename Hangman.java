@@ -24,6 +24,12 @@ public class Hangman extends ConsoleProgram {
     	
 		/* You fill this in */
 	}
+    
+    
+    public void init() {
+    	canvas = new HangmanCanvas();
+    	add(canvas);
+    	}
 
     /**
      * sets an initial state of the hangman
@@ -305,6 +311,7 @@ public class Hangman extends ConsoleProgram {
     RandomGenerator rgen = RandomGenerator.getInstance();
     
     private HangmanLexicon lexicon;
+    private HangmanCanvas canvas;
     private static char guessLetter;
     
     /**
