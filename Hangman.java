@@ -235,8 +235,9 @@ public class Hangman extends ConsoleProgram {
     		lives--;
     		println("You entered a wrong character");
     		println("");
+    		charTyped+=guessLetter;
     	}
-    	charTyped+=guessLetter;
+    	
     }
     
     /**
@@ -244,7 +245,6 @@ public class Hangman extends ConsoleProgram {
      * @return true or false
      */
     private boolean letterAlreadyTyped(){
-    	
   
 	    for (int i = 0; i < charTyped.length(); i++){
 			if (charTyped.charAt(i) == guessLetter){
