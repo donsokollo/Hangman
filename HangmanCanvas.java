@@ -200,13 +200,16 @@ public class HangmanCanvas extends GCanvas {
 		livesLeft.setLocation( getWidth()-labelWidth - 20 ,
 				100 + labelAscent/2);
 		
-		GImage serce = new GImage("serce.jpg");
+		serce = new GImage("serce.jpg");
 		serce.scale(.1);
 		serce.setLocation(  getWidth()-labelWidth - 25 - serce.getWidth(),
 				100 - serce.getHeight()/2);
 		add(serce);
 		
-		if ( livesLeft != null) remove(livesLeft); remove(serce);
+		if ( livesLeft != null) {
+			remove(livesLeft); 
+			remove(serce);
+		}
 		if (lives != 0){
 			livesLeft = new GLabel("" + lives);
 		} else {
@@ -229,6 +232,9 @@ public class HangmanCanvas extends GCanvas {
 
 /*Label with a number of lives left*/
 	GLabel livesLeft = null;
+	
+	/*Label with a number of lives left*/
+	GImage serce = null;	
 
 /* Constants for the simple version of the picture (in pixels) */
 	private static final int SCAFFOLD_HEIGHT = 360;
