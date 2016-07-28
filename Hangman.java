@@ -20,7 +20,6 @@ public class Hangman extends ConsoleProgram {
     public void run() {
     	lexicon = new HangmanLexicon();
     	setInitialState();
-    	canvas.initSize();
     	playGame();
 		/* You fill this in */
 	}
