@@ -69,7 +69,7 @@ public class Hangman extends ConsoleProgram {
 	    		canvas.printLives(lives, LIVES_NUMBER);
 	    		if (gameWon) break;
 	    		checkIfGameOver();
-	    		printTheGuessWord(); 
+ 
 	    		
 	    	}
 	    	printEndStatement();
@@ -183,7 +183,6 @@ public class Hangman extends ConsoleProgram {
      * Assign the typed word to the currentGuessString
      */
     private void promptForWord(){
-    	println("Lives left " + lives);
     	/*println("the word is "+ word);*/
     	currentGuessString = readLine("Please type a guess letter or a guess word: ").toUpperCase();
     	
