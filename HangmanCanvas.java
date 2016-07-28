@@ -174,7 +174,7 @@ public class HangmanCanvas extends GCanvas {
 	private void printProbeCharacters(String charactersAlreadyTyped){
 		
 
-		charactersTyped = new GLabel("Characters already guessed are" + "charactersAlreadyTyped");
+		charactersTyped = new GLabel("Characters already guessed are" + charactersAlreadyTyped);
 		double labelWidth = charactersTyped.getWidth();
 		double labelAscent = charactersTyped.getAscent();
 		charactersTyped.setLocation((getWidth()-labelWidth) / 2 - labelWidth / 2 ,
