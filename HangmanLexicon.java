@@ -13,21 +13,25 @@ import acm.program.*;
 public class HangmanLexicon extends ConsoleProgram{
 		// This is the HangmanLexicon constructor
 		public HangmanLexicon() {
-			BufferedReader rd = openFile("Please enter filename");
-			
-			try {
-				while (true){
-					String line = rd.readLine();
-					if (line == null) break;
-					println("Read line: [" + line + "]");
-				}
-				rd.close();
-			} catch (IOException ex) {
-				throw new ErrorException(ex);
-			}
-		// your initialization code goes here
+
 		}
 
+		public void run(){
+		BufferedReader rd = openFile("Please enter filename");
+		
+		try {
+			while (true){
+				String line = rd.readLine();
+				if (line == null) break;
+				println("Read line: [" + line + "]");
+			}
+			rd.close();
+		} catch (IOException ex) {
+			throw new ErrorException(ex);
+		}
+	// your initialization code goes here
+	}		
+		
 		private BufferedReader openFile(String prompt){
 			BufferedReader rd = null;
 			while (rd == null){
