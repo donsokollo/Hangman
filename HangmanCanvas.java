@@ -179,14 +179,27 @@ public class HangmanCanvas extends GCanvas {
 		double labelWidth = charactersTyped.getWidth();
 		double labelAscent = charactersTyped.getAscent();
 		charactersTyped.setLocation( (getWidth()-labelWidth) / 2 ,
-				getHeight() - 50 + labelAscent);		
+				getHeight() - 50 - labelAscent/2);		
+		add(charactersTyped);
+	}
+	
+	public void printWordState(String currentStateOfGuess){
+		
+		if (currentStateOfGuess != null) remove(guessState);
+		guessState = new GLabel("You already guessed " + currentStateOfGuess);
+		double labelWidth = charactersTyped.getWidth();
+		double labelAscent = charactersTyped.getAscent();
+		charactersTyped.setLocation( (getWidth()-labelWidth) / 2 ,
+				50 + labelAscent/2);		
 		add(charactersTyped);
 	}
 	
 	
 /*label with guess characters*/
 	GLabel charactersTyped = null;
-
+	
+/*label with a current state of the guess*/
+	GLabel guessState = null;
 
 
 /* Constants for the simple version of the picture (in pixels) */

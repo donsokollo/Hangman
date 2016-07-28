@@ -63,6 +63,7 @@ public class Hangman extends ConsoleProgram {
 	    		checkTypeOfInput();
 	    		actOnInputLetter();
 	    		canvas.noteIncorrectGuess(charTyped);
+	    		canvas.printWordState(currentWordToGuess);
 	    		if (gameWon) break;
 	    		checkIfGameOver();
 	    		printTheGuessWord();   
