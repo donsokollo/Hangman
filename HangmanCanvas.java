@@ -225,7 +225,7 @@ public class HangmanCanvas extends GCanvas {
 		
 		
 		guessWord = new GLabel("The word was: " + wordNotGuessed);
-		guessWord.setFont("Times-30");
+		guessWord.setFont("Times-25");
 		double labelWidth = guessWord.getWidth();
 		double labelAscent = guessWord.getAscent();
 		guessWord.setLocation( (getWidth()-labelWidth) / 2 ,
