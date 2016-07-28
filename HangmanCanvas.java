@@ -10,7 +10,10 @@ public class HangmanCanvas extends GCanvas {
 
 /** Resets the display so that only the scaffold appears */
 	public void reset() {
-		/* You fill this in */
+		
+		removeAll();
+		printFirstPicture();
+		
 	}
 
 /**
@@ -31,6 +34,34 @@ public class HangmanCanvas extends GCanvas {
 	public void noteIncorrectGuess(char letter) {
 		/* You fill this in */
 	}
+	
+	private void printFirstPicture(){
+		printScaffold();
+		printBeam();
+		printRope();
+	}
+	
+	private void printScaffold(){
+		double x0 = (getWidth()-BEAM_LENGTH - UPPER_ARM_LENGTH) / 2;
+		double y0 = (getHeight()-SCAFFOLD_HEIGHT)/2;
+		GLine scaffold = new GLine(x0, y0, x0, y0 + SCAFFOLD_HEIGHT);
+		add(scaffold);
+	}
+	
+	private void printBeam(){
+		double x0 = (getWidth()-BEAM_LENGTH - UPPER_ARM_LENGTH) / 2;
+		double y0 = (getHeight()-SCAFFOLD_HEIGHT)/2 + SCAFFOLD_HEIGHT;
+		GLine scaffold = new GLine(x0, y0, x0 + BEAM_LENGTH, y0);
+		add(scaffold);
+	}
+	
+	private void printRope(){
+		double x0 = (getWidth() - UPPER_ARM_LENGTH) / 2 + BEAM_LENGTH / 2;
+		double y0 = (getHeight()-SCAFFOLD_HEIGHT)/2  + SCAFFOLD_HEIGHT;
+		GLine scaffold = new GLine(x0, y0, x0, y0 + ROPE_LENGTH);
+		add(scaffold);
+	}
+	
 
 /* Constants for the simple version of the picture (in pixels) */
 	private static final int SCAFFOLD_HEIGHT = 360;
