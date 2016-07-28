@@ -17,7 +17,7 @@ public class HangmanLexicon extends ConsoleProgram{
 	
 	
 public HangmanLexicon() {
-run();
+
 	
 }	
 
