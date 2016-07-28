@@ -190,7 +190,7 @@ public class HangmanCanvas extends GCanvas {
 		double labelWidth = charactersTyped.getWidth();
 		double labelAscent = charactersTyped.getAscent();
 		charactersTyped.setLocation( (getWidth()-labelWidth) / 2 ,
-				50 + labelAscent/2);		
+				20 + labelAscent/2);		
 		add(charactersTyped);
 	}
 	
