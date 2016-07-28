@@ -17,23 +17,23 @@ public class HangmanLexicon extends ConsoleProgram{
 	
 	
 public HangmanLexicon() {
-
+countWords();
 	
 }	
 
-public void run (){
-BufferedReader rd = openFile("Please enter filename: ");
-try {
-	while (true){
-		String line = rd.readLine();
-		if (line == null) break;
-		println("Read line: [" + line + "]");
-		arrayOfWords.add(line);
+private void countWords(){
+	BufferedReader rd = openFile("Please enter filename: ");
+	try {
+		while (true){
+			String line = rd.readLine();
+			if (line == null) break;
+			println("Read line: [" + line + "]");
+			arrayOfWords.add(line);
+		}
+		rd.close();
+	} catch (IOException ex) {
+		throw new ErrorException(ex);
 	}
-	rd.close();
-} catch (IOException ex) {
-	throw new ErrorException(ex);
-}
 }
 		
 		private BufferedReader openFile(String prompt){
