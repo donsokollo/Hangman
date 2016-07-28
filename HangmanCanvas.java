@@ -195,24 +195,28 @@ public class HangmanCanvas extends GCanvas {
 	}
 	
 	public void printLives(int lives, int maximumLives){
-		
-		if ( livesLeft != null) remove(livesLeft);
-		if (lives != 0){
-			livesLeft = new GLabel("You have " + lives + " lives");
-		} else {
-			livesLeft = new GLabel("You lost all Your lives");
-		}
-		
 		double labelWidth = livesLeft.getWidth();
 		double labelAscent = livesLeft.getAscent();
 		livesLeft.setLocation( getWidth()-labelWidth - 20 ,
-				100 + labelAscent/2);		
-		add(livesLeft);
+				100 + labelAscent/2);
+		
 		GImage serce = new GImage("serce.jpg");
 		serce.scale(.1);
 		serce.setLocation(  getWidth()-labelWidth - 25 - serce.getWidth(),
 				100 - serce.getHeight()/2);
 		add(serce);
+		
+		if ( livesLeft != null) remove(livesLeft); remove(serce);
+		if (lives != 0){
+			livesLeft = new GLabel("" + lives);
+		} else {
+			livesLeft = new GLabel("You lost all Your lives");
+			remove(serce);
+		}
+		
+				
+		add(livesLeft);
+		
 	}
 
 	
