@@ -184,9 +184,6 @@ public class HangmanCanvas extends GCanvas {
 		add(charactersTyped);
 	}
 	
-	public void initSize(){
-		setSize(CANVAS_WIDTH, CANVAS_HEIGHT);
-	}
 	
 /*label with guess characters*/
 	GLabel charactersTyped = null;
@@ -206,9 +203,7 @@ public class HangmanCanvas extends GCanvas {
 	private static final int LEG_LENGTH = 108;
 	private static final int FOOT_LENGTH = 28;
 
-/*canvas size*/
-	private static final int CANVAS_HEIGHT = BEAM_LENGTH + UPPER_ARM_LENGTH + 900;
-	private static final int CANVAS_WIDTH = SCAFFOLD_HEIGHT + 900;
+
 
 /*middle x of the body */
 	private final int BODY_MIDDLE_X = 200;
