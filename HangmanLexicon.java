@@ -17,11 +17,11 @@ public class HangmanLexicon extends ConsoleProgram{
 	
 	
 public HangmanLexicon() {
-countWords();
+run();
 	
 }	
 
-private void countWords(){
+public void run(){
 	BufferedReader rd = openFile("Please enter filename: ");
 	try {
 		while (true){
