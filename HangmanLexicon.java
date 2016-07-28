@@ -6,6 +6,7 @@
  */
 
 import java.io.*;
+import java.util.ArrayList;
 
 import acm.util.*;
 import acm.program.*;
@@ -13,26 +14,20 @@ import acm.program.*;
 public class HangmanLexicon extends ConsoleProgram{
 		// This is the HangmanLexicon constructor
 		public HangmanLexicon() {
-	
-		}	
-		
-		
-		public void run(){
-			BufferedReader rd = openFile("Please enter filename");
-			
+			BufferedReader rd = openFile("Please enter filename: ");
 			try {
 				while (true){
 					String line = rd.readLine();
 					if (line == null) break;
 					println("Read line: [" + line + "]");
+					arrayOfWords.add(line);
 				}
 				rd.close();
 			} catch (IOException ex) {
 				throw new ErrorException(ex);
-		}
+	
+		}	
 
-
-	// your initialization code goes here
 	}		
 		
 		
@@ -52,6 +47,7 @@ public class HangmanLexicon extends ConsoleProgram{
 		
 /** Returns the number of words in the lexicon. */
 	public int getWordCount() {
+		new HangmanLexicon();
 		return 10;
 	}
 
@@ -71,4 +67,8 @@ public class HangmanLexicon extends ConsoleProgram{
 			default: throw new ErrorException("getWord: Illegal index");
 		}
 	};
+	
+
+private ArrayList<String> arrayOfWords;	
 }
+
