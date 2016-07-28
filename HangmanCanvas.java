@@ -166,7 +166,7 @@ public class HangmanCanvas extends GCanvas {
 	}
 	
 	private void printFoot(double x0, double y0, int footDirection){
-		GLine foot = new GLine(x0, y0, x0 + footDirection * HIP_WIDTH, y0 );
+		GLine foot = new GLine(x0, y0, x0 + footDirection * FOOT_LENGTH, y0 );
 		add(foot);
 	}
 	
@@ -205,6 +205,6 @@ public class HangmanCanvas extends GCanvas {
 	private static final int FOOT_LENGTH = 28;
 	
 /*middle x of the canvas */
-	private static final int BODY_MIDDLE_X = (getWidth() - UPPER_ARM_LENGTH) /2 + BEAM_LENGTH / 2;
+	private final int BODY_MIDDLE_X = (getWidth() - UPPER_ARM_LENGTH) /2 + BEAM_LENGTH / 2;
 
 }
