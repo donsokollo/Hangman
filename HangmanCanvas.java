@@ -205,6 +205,6 @@ public class HangmanCanvas extends GCanvas {
 	private static final int FOOT_LENGTH = 28;
 	
 /*middle x of the canvas */
-	private final int BODY_MIDDLE_X = (getWidth() - UPPER_ARM_LENGTH) /2 + BEAM_LENGTH;
+	private final int BODY_MIDDLE_X = (getWidth()-BEAM_LENGTH - UPPER_ARM_LENGTH) /2 + BEAM_LENGTH;
 
 }
