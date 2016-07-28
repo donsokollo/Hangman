@@ -33,7 +33,7 @@ public class HangmanCanvas extends GCanvas {
  */
 	public void noteIncorrectGuess(String charactersAlreadyTyped) {
 		int livesLeft = Hangman.getLivesNumber() * (Hangman.getLivesNumber() / 8);
-		
+		System.out.println(livesLeft);
 		switch (livesLeft) {
 		case 7: printHead();
 			break;
@@ -65,7 +65,7 @@ public class HangmanCanvas extends GCanvas {
 		double x0 = (getWidth()-BEAM_LENGTH - UPPER_ARM_LENGTH) /2;
 		double y0 = (getHeight()-SCAFFOLD_HEIGHT)/2 ;
 
-		System.out.println(y0);
+
 		GLine scaffold = new GLine(x0, y0, x0, y0 + SCAFFOLD_HEIGHT);
 		add(scaffold);
 	}
