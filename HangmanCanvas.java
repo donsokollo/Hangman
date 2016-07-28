@@ -82,8 +82,7 @@ public class HangmanCanvas extends GCanvas {
 		double y0 = (getHeight()-SCAFFOLD_HEIGHT)/2;
 		GLine rope = new GLine(x0, y0, x0, y0 + ROPE_LENGTH);
 		add(rope);
-		System.out.println(getWidth());
-		System.out.println(CANVAS_WIDTH);
+
 	}
 	
 	private void printHead(){
