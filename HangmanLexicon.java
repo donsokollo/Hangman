@@ -74,6 +74,6 @@ private void countWords(){
 	};
 	
 
-private ArrayList<String> arrayOfWords;	
+private ArrayList<String> arrayOfWords = new ArrayList<String>();	
 }
 
