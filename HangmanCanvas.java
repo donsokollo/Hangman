@@ -174,18 +174,18 @@ public class HangmanCanvas extends GCanvas {
 	
 	private void printProbeCharacters(String charactersAlreadyTyped){
 		
-		if (charactersTyped != null) remove(charactersTyped);
-		charactersTyped = new GLabel("Characters already guessed are: " + charactersAlreadyTyped);
-		double labelWidth = charactersTyped.getWidth();
-		double labelAscent = charactersTyped.getAscent();
-		charactersTyped.setLocation( (getWidth()-labelWidth) / 2 ,
-				getHeight() - 50 - labelAscent/2);		
-		add(charactersTyped);
+		
 	}
 	
 	public void printWordState(String currentStateOfGuess){
 		
-
+		if (guessState != null) remove(guessState);
+		guessState = new GLabel("You already guessed " + currentStateOfGuess);
+		double labelWidth = guessState.getWidth();
+		double labelAscent = guessState.getAscent();
+		charactersTyped.setLocation( (getWidth()-labelWidth) / 2 ,
+				50 + labelAscent);		
+		add(guessState);
 	}
 	
 	
