@@ -313,6 +313,15 @@ public class Hangman extends ConsoleProgram {
     	return lives;
     }
     
+    public void printBadFile (){
+    	println("Bad file. Please insert a proper name of the file.");
+    }
+    
+    
+    public String getFileName(){
+    	return readLine("Please enter a file name for the library. As default enter HangmanLexicon.tx");
+    }
+    
     RandomGenerator rgen = RandomGenerator.getInstance();
     
     private HangmanLexicon lexicon;

@@ -11,23 +11,23 @@ import java.util.ArrayList;
 import acm.util.*;
 import acm.program.*;
 
-public class HangmanLexicon extends ConsoleProgram{
+public class HangmanLexicon {
 		// This is the HangmanLexicon constructor
 
 	
 	
 public HangmanLexicon() {
-
+	makeAnArray();
 	
 }	
 
-public void run(){
+public void makeAnArray(){
 	BufferedReader rd = openFile("Please enter filename: ");
 	try {
 		while (true){
 			String line = rd.readLine();
 			if (line == null) break;
-			println("Read line: [" + line + "]");
+
 			arrayOfWords.add(line);
 		}
 		rd.close();
@@ -40,10 +40,10 @@ public void run(){
 			BufferedReader rd = null;
 			while (rd == null){
 				try {
-					String filename = readLine(prompt);
+					String filename = "HangmanLexicon.txt"; /*only a workaround of the problem that cannot ask readLine here?*/
 					rd = new BufferedReader( new FileReader(filename));
 				} catch (IOException ex) {
-					println("bad file");
+					System.out.println("Wrong name");;
 				}
 			}
 			return rd;
