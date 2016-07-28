@@ -88,14 +88,14 @@ public class HangmanCanvas extends GCanvas {
 	
 	private void printHead(){
 		int x = BODY_MIDDLE_X - HEAD_RADIUS;
-		int y = (getHeight()-SCAFFOLD_HEIGHT)/2;
+		int y = (getHeight()-SCAFFOLD_HEIGHT)/2+ ROPE_LENGTH;
 		GOval head = new GOval(x, y, 2*HEAD_RADIUS, 2*HEAD_RADIUS);
 		add(head);
 	}
 	
 	private void printNeck(){
 		double x0 = BODY_MIDDLE_X;
-		double y0 = (getHeight()-SCAFFOLD_HEIGHT)/2 + 2*HEAD_RADIUS;
+		double y0 = (getHeight()-SCAFFOLD_HEIGHT)/2 + ROPE_LENGTH + 2*HEAD_RADIUS;
 		GLine neck = new GLine(x0, y0, x0, y0 + ARM_OFFSET_FROM_HEAD);
 		add(neck);
 	}
@@ -103,7 +103,7 @@ public class HangmanCanvas extends GCanvas {
 	private void printLeftArm(){
 		
 		double x0_Horizontal = BODY_MIDDLE_X;
-		double y0 = (getHeight()-SCAFFOLD_HEIGHT)/2 + 2*HEAD_RADIUS + ARM_OFFSET_FROM_HEAD;
+		double y0 = (getHeight()-SCAFFOLD_HEIGHT)/2 + ROPE_LENGTH + 2*HEAD_RADIUS + ARM_OFFSET_FROM_HEAD;
 		printHorizontalArm(x0_Horizontal, y0, -1);
 		double x0_Vertical = BODY_MIDDLE_X - UPPER_ARM_LENGTH;
 		printVerticalArm(x0_Vertical, y0);
@@ -112,7 +112,7 @@ public class HangmanCanvas extends GCanvas {
 	private void printRightArm(){
 		
 		double x0_Horizontal = BODY_MIDDLE_X;
-		double y0 = (getHeight()-SCAFFOLD_HEIGHT)/2 + 2*HEAD_RADIUS + ARM_OFFSET_FROM_HEAD;
+		double y0 = (getHeight()-SCAFFOLD_HEIGHT)/2 + ROPE_LENGTH + 2*HEAD_RADIUS + ARM_OFFSET_FROM_HEAD;
 		printHorizontalArm(x0_Horizontal, y0, 1);
 		double x0_Vertical = BODY_MIDDLE_X + UPPER_ARM_LENGTH;
 		printVerticalArm(x0_Vertical, y0);
@@ -130,7 +130,7 @@ public class HangmanCanvas extends GCanvas {
 	
 	private void printBody(){
 		int x0 = BODY_MIDDLE_X;
-		int y0 = (getHeight()-SCAFFOLD_HEIGHT)/2 + 2*HEAD_RADIUS + ARM_OFFSET_FROM_HEAD ;
+		int y0 = (getHeight()-SCAFFOLD_HEIGHT)/2 + ROPE_LENGTH + 2*HEAD_RADIUS + ARM_OFFSET_FROM_HEAD ;
 		GLine body = new GLine(x0, y0, x0, y0 + BODY_LENGTH);
 		add(body);
 	}
@@ -138,7 +138,7 @@ public class HangmanCanvas extends GCanvas {
 	private void printLeftLeg(){
 		
 		double x0_Horizontal = BODY_MIDDLE_X;
-		double y0 = (getHeight()-SCAFFOLD_HEIGHT)/2 + 2*HEAD_RADIUS + ARM_OFFSET_FROM_HEAD + BODY_LENGTH;
+		double y0 = (getHeight()-SCAFFOLD_HEIGHT)/2 + ROPE_LENGTH + 2*HEAD_RADIUS + ARM_OFFSET_FROM_HEAD + BODY_LENGTH;
 		printHorizontalLeg(x0_Horizontal, y0, -1);
 		double x0_Vertical = BODY_MIDDLE_X - HIP_WIDTH;
 		printVerticalLeg(x0_Vertical, y0);
@@ -149,7 +149,7 @@ public class HangmanCanvas extends GCanvas {
 	private void printRightLeg(){
 		
 		double x0_Horizontal = BODY_MIDDLE_X;
-		double y0 = (getHeight()-SCAFFOLD_HEIGHT)/2 + 2*HEAD_RADIUS + ARM_OFFSET_FROM_HEAD + BODY_LENGTH;
+		double y0 = (getHeight()-SCAFFOLD_HEIGHT)/2 + ROPE_LENGTH + 2*HEAD_RADIUS + ARM_OFFSET_FROM_HEAD + BODY_LENGTH;
 		printHorizontalLeg(x0_Horizontal, y0, 1);
 		double x0_Vertical = BODY_MIDDLE_X + HIP_WIDTH;
 		printVerticalLeg(x0_Vertical, y0);
