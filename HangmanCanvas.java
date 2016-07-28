@@ -177,7 +177,7 @@ public class HangmanCanvas extends GCanvas {
 		charactersTyped = new GLabel("Characters already guessed are: " + charactersAlreadyTyped);
 		double labelWidth = charactersTyped.getWidth();
 		double labelAscent = charactersTyped.getAscent();
-		charactersTyped.setLocation( (getWidth()-labelWidth) / 2 - labelWidth / 2 ,
+		charactersTyped.setLocation( (getWidth()-labelWidth) / 2 ,
 				getHeight() - 50 + labelAscent);		
 		add(charactersTyped);
 	}
