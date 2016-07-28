@@ -208,8 +208,10 @@ public class HangmanCanvas extends GCanvas {
 		livesLeft.setLocation( getWidth()-labelWidth - 20 ,
 				100 + labelAscent/2);		
 		add(livesLeft);
-		GImage serce = new GImage("serce.jpg", 100, 100);
+		GImage serce = new GImage("serce.jpg");
 		serce.scale(.1);
+		serce.setLocation(  getWidth()-labelWidth - 30 - serce.getWidth(),
+				100 + labelAscent/2 - serce.getHeight());
 		add(serce);
 	}
 
