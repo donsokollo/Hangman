@@ -14,6 +14,7 @@ import acm.program.*;
 public class HangmanLexicon extends ConsoleProgram{
 		// This is the HangmanLexicon constructor
 		public HangmanLexicon() {
+
 			BufferedReader rd = openFile("Please enter filename: ");
 			try {
 				while (true){
