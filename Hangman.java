@@ -65,7 +65,8 @@ public class Hangman extends ConsoleProgram {
 	    		canvas.printLives(lives, LIVES_NUMBER);
 	    		if (gameWon) break;
 	    		checkIfGameOver();
-	    		printTheGuessWord();   
+	    		printTheGuessWord(); 
+	    		println(word);
 	    		
 	    	}
 	    	printEndStatement();
