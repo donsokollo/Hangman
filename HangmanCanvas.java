@@ -209,6 +209,7 @@ public class HangmanCanvas extends GCanvas {
 				100 + labelAscent/2);		
 		add(livesLeft);
 		GImage serce = new GImage("serce.jpg", 100, 100);
+		serce.scale(.1);
 		add(serce);
 	}
 
