@@ -153,7 +153,7 @@ public class HangmanCanvas extends GCanvas {
 		printHorizontalLeg(x0_Horizontal, y0, 1);
 		double x0_Vertical = BODY_MIDDLE_X + HIP_WIDTH;
 		printVerticalLeg(x0_Vertical, y0);
-		double y0_Foot = (getHeight()-SCAFFOLD_HEIGHT)/2 + 2*HEAD_RADIUS + ARM_OFFSET_FROM_HEAD + BODY_LENGTH + LEG_LENGTH;
+		double y0_Foot = (getHeight()-SCAFFOLD_HEIGHT)/2 + ROPE_LENGTH + 2*HEAD_RADIUS + ARM_OFFSET_FROM_HEAD + BODY_LENGTH + LEG_LENGTH;
 		printFoot(x0_Vertical, y0_Foot, 1);
 	}
 	
