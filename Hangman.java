@@ -37,8 +37,6 @@ public class Hangman extends ConsoleProgram {
      */
     private void setInitialState(){
     	printExplanationMessage();
-    	canvas.printWordState(currentWordToGuess);
-		canvas.printLives(lives, LIVES_NUMBER);
     	
     }
     
@@ -54,10 +52,13 @@ public class Hangman extends ConsoleProgram {
     }
     
     private void playGame(){
+    	
     	while(!endGameRequest){
 	    	pickOneWord();
 	    	setTheCurrentWordtoGuess();
 	    	canvas.reset();
+	    	canvas.printWordState(currentWordToGuess);
+			canvas.printLives(lives, LIVES_NUMBER);
 	    	while (!gameOver){
 	    		
 	    		promptForWord();
