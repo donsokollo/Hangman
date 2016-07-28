@@ -32,7 +32,7 @@ public class HangmanCanvas extends GCanvas {
  * guesses that appears at the bottom of the window.
  */
 	public void noteIncorrectGuess(String charactersAlreadyTyped) {
-		int livesLeft = Hangman.getLivesNumber() * (Hangman.getLivesNumber() / 8);
+		int livesLeft = Hangman.getLivesNumber() * (Hangman.getLivesNumber() / 8 + 1);
 		System.out.println(livesLeft);
 		switch (livesLeft) {
 		case 7: printHead();
