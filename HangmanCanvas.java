@@ -37,8 +37,8 @@ public class HangmanCanvas extends GCanvas {
 	
 	private void printFirstPicture(){
 		printScaffold();
-		printBeam();
-		printRope();
+		/*printBeam();
+		printRope();*/
 	}
 	
 	private void printScaffold(){
