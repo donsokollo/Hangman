@@ -14,8 +14,8 @@ import java.awt.*;
 
 public class Hangman extends ConsoleProgram {
 
-	/** number of lives that should be divisible by 8 to get a right sequence of animation!!*/
-	private static final int LIVES_NUMBER = 8;
+	/** number of lives that should be divisible by 7 to get a right sequence of animation!!*/
+	private static final int LIVES_NUMBER = 7;
 
     public void run() {
     	lexicon = new HangmanLexicon();
