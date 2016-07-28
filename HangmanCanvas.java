@@ -65,6 +65,12 @@ public class HangmanCanvas extends GCanvas {
 		add(rope);
 	}
 	
+	public void initSize(){
+		int width = BEAM_LENGTH + UPPER_ARM_LENGTH + 200;
+		int height = SCAFFOLD_HEIGHT + 200;
+		setSize(width, height);
+	}
+	
 
 /* Constants for the simple version of the picture (in pixels) */
 	private static final int SCAFFOLD_HEIGHT = 360;
