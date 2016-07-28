@@ -185,7 +185,7 @@ public class HangmanCanvas extends GCanvas {
 	
 	public void printWordState(String currentStateOfGuess){
 		
-		if (currentStateOfGuess != null) remove(guessState);
+		if (guessState != null) remove(guessState);
 		guessState = new GLabel("You already guessed " + currentStateOfGuess);
 		double labelWidth = charactersTyped.getWidth();
 		double labelAscent = charactersTyped.getAscent();
