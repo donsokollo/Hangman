@@ -245,9 +245,10 @@ public class Hangman extends ConsoleProgram {
     	    		currentWordToGuess = currentWordToGuess.substring(0, i*2) 
     	    				+ guessLetter + " " + currentWordToGuess.substring(i*2+2);
     	    	}
+    		println("You guessed one character. Keep on guessing!");
     	} else if (!letterAlreadyTyped() || letterAlreadyTypedAndWrong){
     		lives--;
-    		println("You entered a wrong character");
+    		println("You entered a wrong character. Try again.");
     		println("");
     		if (!letterAlreadyTypedAndWrong) charTyped+=guessLetter;
     	}
