@@ -17,7 +17,7 @@ public class HangmanLexicon extends ConsoleProgram{
 		}	
 		
 		
-		public void init(){
+		public void run(){
 			BufferedReader rd = openFile("Please enter filename");
 			
 			try {
