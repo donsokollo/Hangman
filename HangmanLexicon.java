@@ -5,10 +5,43 @@
  * class that you will reimplement for Part III of the assignment.
  */
 
+import java.io.*;
+
 import acm.util.*;
+import acm.program.*;
 
-public class HangmanLexicon {
+public class HangmanLexicon extends ConsoleProgram{
+		// This is the HangmanLexicon constructor
+		public HangmanLexicon() {
+			BufferedReader rd = openFile("Please enter filename");
+			
+			try {
+				while (true){
+					String line = rd.readLine();
+					if (line == null) break;
+					println("Read line: [" + line + "]");
+				}
+				rd.close();
+			} catch (IOException ex) {
+				throw new ErrorException(ex);
+			}
+		// your initialization code goes here
+		}
 
+		private BufferedReader openFile(String prompt){
+			BufferedReader rd = null;
+			while (rd == null){
+				try {
+					String filename = readLine(prompt);
+					rd = new BufferedReader( new FileReader(filename));
+				} catch (IOException ex) {
+					println("bad file");
+				}
+			}
+			return rd;
+		}
+		
+		
 /** Returns the number of words in the lexicon. */
 	public int getWordCount() {
 		return 10;
