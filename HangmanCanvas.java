@@ -218,9 +218,19 @@ public class HangmanCanvas extends GCanvas {
 		serce.setLocation(  getWidth()-labelWidth - 25 - serce.getWidth(),
 				100 - serce.getHeight()/2);
 		add(serce);
-				
-	
 		
+	}
+	
+	public void printWordNotGuessed(String wordNotGuessed){
+		
+		
+		guessWord = new GLabel("The word was: " + wordNotGuessed);
+		guessWord.setFont("Times-30");
+		double labelWidth = guessWord.getWidth();
+		double labelAscent = guessWord.getAscent();
+		guessWord.setLocation( (getWidth()-labelWidth) / 2 ,
+				getHeight() - labelAscent/2);
+		add(guessWord);
 	}
 
 	
@@ -233,8 +243,11 @@ public class HangmanCanvas extends GCanvas {
 
 /*Label with a number of lives left*/
 	GLabel livesLeft = null;
+
+/*Label with a number of lives left*/
+	GLabel guessWord= null;
 	
-	/*Label with a number of lives left*/
+/*Label with a number of lives left*/
 	GImage serce = null;	
 
 /* Constants for the simple version of the picture (in pixels) */

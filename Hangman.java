@@ -73,6 +73,7 @@ public class Hangman extends ConsoleProgram {
 	    		
 	    	}
 	    	printEndStatement();
+	    	canvas.printWordNotGuessed(word);
 	    	setForTheNextGame();
 	    	askIfAnotherGame();
 	    	
@@ -246,6 +247,7 @@ public class Hangman extends ConsoleProgram {
     	    				+ guessLetter + " " + currentWordToGuess.substring(i*2+2);
     	    	}
     		println("You guessed one character. Keep on guessing!");
+    		println("");
     	} else if (!letterAlreadyTyped() || letterAlreadyTypedAndWrong){
     		lives--;
     		println("You entered a wrong character. Try again.");
