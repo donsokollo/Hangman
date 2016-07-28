@@ -51,15 +51,15 @@ public class HangmanCanvas extends GCanvas {
 	private void printBeam(){
 		double x0 = (getWidth()-BEAM_LENGTH - UPPER_ARM_LENGTH) *3/4;
 		double y0 = (getHeight()-SCAFFOLD_HEIGHT)/2 + SCAFFOLD_HEIGHT;
-		GLine scaffold = new GLine(x0, y0, x0 + BEAM_LENGTH, y0);
-		add(scaffold);
+		GLine beam = new GLine(x0, y0, x0 + BEAM_LENGTH, y0);
+		add(beam);
 	}
 	
 	private void printRope(){
 		double x0 = (getWidth() - UPPER_ARM_LENGTH) *3/4 + BEAM_LENGTH / 2;
 		double y0 = (getHeight()-SCAFFOLD_HEIGHT)/2  + SCAFFOLD_HEIGHT;
-		GLine scaffold = new GLine(x0, y0, x0, y0 + ROPE_LENGTH);
-		add(scaffold);
+		GLine rope = new GLine(x0, y0, x0, y0 + ROPE_LENGTH);
+		add(rope);
 	}
 	
 
