@@ -43,7 +43,7 @@ public void makeAnArray(){
 					String filename = "HangmanLexicon.txt"; /*only a workaround of the problem that cannot ask readLine here?*/
 					rd = new BufferedReader( new FileReader(filename));
 				} catch (IOException ex) {
-					System.out.println("Wrong name");;
+					System.out.println("Wrong name");
 				}
 			}
 			return rd;
@@ -53,11 +53,11 @@ public void makeAnArray(){
 /** Returns the number of words in the lexicon. */
 	public int getWordCount() {
 		/*new HangmanLexicon();*/
-		return 10;
+		return arrayOfWords.size();
 	}
 
 /** Returns the word at the specified index. */
-	public String getWord(int index) {
+	/* public String getWord(int index) {
 		switch (index) {
 			case 0: return "BUOY";
 			case 1: return "COMPUTER";
@@ -72,7 +72,10 @@ public void makeAnArray(){
 			default: throw new ErrorException("getWord: Illegal index");
 		}
 	};
-	
+	REIMPLEMENTED */
+	public String getWord(int index){
+		return arrayOfWords.get(index);
+	}
 
 private ArrayList<String> arrayOfWords = new ArrayList<String>();	
 }
