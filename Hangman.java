@@ -64,6 +64,7 @@ public class Hangman extends ConsoleProgram {
 	    		actOnInputLetter();
 	    		canvas.noteIncorrectGuess(charTyped);
 	    		canvas.printWordState(currentWordToGuess);
+	    		canvas.printLives(lives, LIVES_NUMBER);
 	    		if (gameWon) break;
 	    		checkIfGameOver();
 	    		printTheGuessWord();   

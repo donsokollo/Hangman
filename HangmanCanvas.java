@@ -194,6 +194,18 @@ public class HangmanCanvas extends GCanvas {
 		add(guessState);
 	}
 	
+	public void printLives(int lives, int maximumLives){
+		
+		if ( livesLeft != null) remove(livesLeft);
+		livesLeft = new GLabel("You have " + lives + " lives");
+		double labelWidth = livesLeft.getWidth();
+		double labelAscent = livesLeft.getAscent();
+		livesLeft.setLocation( getWidth()-labelWidth - 20 ,
+				100 + labelAscent/2);		
+		add(livesLeft);
+	}
+
+	
 	
 /*label with guess characters*/
 	GLabel charactersTyped = null;
@@ -201,6 +213,8 @@ public class HangmanCanvas extends GCanvas {
 /*label with a current state of the guess*/
 	GLabel guessState = null;
 
+/*Label with a number of lives left*/
+	GLabel livesLeft = null;
 
 /* Constants for the simple version of the picture (in pixels) */
 	private static final int SCAFFOLD_HEIGHT = 360;
