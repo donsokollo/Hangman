@@ -44,7 +44,7 @@ public class HangmanCanvas extends GCanvas {
 	private void printScaffold(){
 		/*double x0 = ((getWidth()-BEAM_LENGTH - UPPER_ARM_LENGTH) *3/4);
 		double y0 = (getHeight()-SCAFFOLD_HEIGHT)/2 ;*/
-		double x0 = (getWidth() *3) / 4;
+		double x0 = (getWidth() *3) / 3;
 		double y0 =0 ;
 		
 		GLine scaffold = new GLine(x0, y0, x0, y0 + SCAFFOLD_HEIGHT);
