@@ -195,16 +195,7 @@ public class HangmanCanvas extends GCanvas {
 	}
 	
 	public void printLives(int lives, int maximumLives){
-		double labelWidth = livesLeft.getWidth();
-		double labelAscent = livesLeft.getAscent();
-		livesLeft.setLocation( getWidth()-labelWidth - 20 ,
-				100 + labelAscent/2);
 		
-		serce = new GImage("serce.jpg");
-		serce.scale(.1);
-		serce.setLocation(  getWidth()-labelWidth - 25 - serce.getWidth(),
-				100 - serce.getHeight()/2);
-		add(serce);
 		
 		if ( livesLeft != null) {
 			remove(livesLeft); 
@@ -216,9 +207,19 @@ public class HangmanCanvas extends GCanvas {
 			livesLeft = new GLabel("You lost all Your lives");
 			remove(serce);
 		}
-		
-				
+		double labelWidth = livesLeft.getWidth();
+		double labelAscent = livesLeft.getAscent();
+		livesLeft.setLocation( getWidth()-labelWidth - 20 ,
+				100 + labelAscent/2);
 		add(livesLeft);
+		
+		serce = new GImage("serce.jpg");
+		serce.scale(.1);
+		serce.setLocation(  getWidth()-labelWidth - 25 - serce.getWidth(),
+				100 - serce.getHeight()/2);
+		add(serce);
+				
+	
 		
 	}
 
