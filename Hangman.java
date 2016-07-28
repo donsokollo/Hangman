@@ -14,8 +14,8 @@ import java.awt.*;
 
 public class Hangman extends ConsoleProgram {
 
-	/** number of lives */
-	private static final int LIVES_NUMBER = 10;
+	/** number of lives that should be divisible by 8 to get a right sequence of animation!!*/
+	private static final int LIVES_NUMBER = 8;
 
     public void run() {
     	lexicon = new HangmanLexicon();
@@ -62,6 +62,7 @@ public class Hangman extends ConsoleProgram {
 	    		promptForWord();
 	    		checkTypeOfInput();
 	    		actOnInputLetter();
+	    		canvas.noteIncorrectGuess(charTyped);
 	    		if (gameWon) break;
 	    		checkIfGameOver();
 	    		printTheGuessWord();   
@@ -309,7 +310,9 @@ public class Hangman extends ConsoleProgram {
     	if (lettersLeftToGuess == 0) gameWon = true;
     }
     
-    
+    public static int getLivesNumber (){
+    	return lives;
+    }
     
     RandomGenerator rgen = RandomGenerator.getInstance();
     
