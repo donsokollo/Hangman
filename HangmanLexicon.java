@@ -13,7 +13,11 @@ import acm.program.*;
 public class HangmanLexicon extends ConsoleProgram{
 		// This is the HangmanLexicon constructor
 		public HangmanLexicon() {
-
+	
+		}	
+		
+		
+		public void init(){
 			BufferedReader rd = openFile("Please enter filename");
 			
 			try {
@@ -30,6 +34,7 @@ public class HangmanLexicon extends ConsoleProgram{
 
 	// your initialization code goes here
 	}		
+		
 		
 		private BufferedReader openFile(String prompt){
 			BufferedReader rd = null;
