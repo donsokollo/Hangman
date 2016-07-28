@@ -48,7 +48,7 @@ public class HangmanLexicon extends ConsoleProgram{
 		
 /** Returns the number of words in the lexicon. */
 	public int getWordCount() {
-		new HangmanLexicon();
+		/*new HangmanLexicon();*/
 		return 10;
 	}
 
