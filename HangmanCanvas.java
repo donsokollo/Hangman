@@ -122,7 +122,7 @@ public class HangmanCanvas extends GCanvas {
 	}
 	
 	private void printVerticalArm(double x0, double y0){
-		GLine armVertical = new GLine(x0, y0, x0, y0 - LOWER_ARM_LENGTH);
+		GLine armVertical = new GLine(x0, y0, x0, y0 + LOWER_ARM_LENGTH);
 		add(armVertical);
 	}
 	
@@ -161,7 +161,7 @@ public class HangmanCanvas extends GCanvas {
 	}
 	
 	private void printVerticalLeg(double x0, double y0){
-		GLine leg = new GLine(x0, y0, x0, y0 - LEG_LENGTH);
+		GLine leg = new GLine(x0, y0, x0, y0 + LEG_LENGTH);
 		add(leg);
 	}
 	
