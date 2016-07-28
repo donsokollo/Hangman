@@ -29,7 +29,7 @@ public class Hangman extends ConsoleProgram {
     	canvas = new HangmanCanvas();
     	add(canvas);
     	canvas.initSize();
-    	canvas.reset();
+    	
     	
     	}
 
@@ -56,6 +56,7 @@ public class Hangman extends ConsoleProgram {
     	while(!endGameRequest){
 	    	pickOneWord();
 	    	setTheCurrentWordtoGuess();
+	    	canvas.reset();
 	    	while (!gameOver){
 	    		
 	    		promptForWord();
