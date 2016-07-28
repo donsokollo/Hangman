@@ -14,21 +14,20 @@ public class HangmanLexicon extends ConsoleProgram{
 		// This is the HangmanLexicon constructor
 		public HangmanLexicon() {
 
+			BufferedReader rd = openFile("Please enter filename");
+			
+			try {
+				while (true){
+					String line = rd.readLine();
+					if (line == null) break;
+					println("Read line: [" + line + "]");
+				}
+				rd.close();
+			} catch (IOException ex) {
+				throw new ErrorException(ex);
 		}
 
-		public void run(){
-		BufferedReader rd = openFile("Please enter filename");
-		
-		try {
-			while (true){
-				String line = rd.readLine();
-				if (line == null) break;
-				println("Read line: [" + line + "]");
-			}
-			rd.close();
-		} catch (IOException ex) {
-			throw new ErrorException(ex);
-		}
+
 	// your initialization code goes here
 	}		
 		
