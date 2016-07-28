@@ -229,7 +229,7 @@ public class HangmanCanvas extends GCanvas {
 		double labelWidth = guessWord.getWidth();
 		double labelAscent = guessWord.getAscent();
 		guessWord.setLocation( (getWidth()-labelWidth) / 2 ,
-				getHeight() - labelAscent/2);
+				getHeight()/2 - labelAscent/2);
 		add(guessWord);
 	}
 
