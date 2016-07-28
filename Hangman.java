@@ -28,6 +28,8 @@ public class Hangman extends ConsoleProgram {
     public void init() {
     	canvas = new HangmanCanvas();
     	add(canvas);
+    	canvas.printWordState(currentWordToGuess);
+		canvas.printLives(lives, LIVES_NUMBER);
   
     	}
 
@@ -66,7 +68,6 @@ public class Hangman extends ConsoleProgram {
 	    		if (gameWon) break;
 	    		checkIfGameOver();
 	    		printTheGuessWord(); 
-	    		println(word);
 	    		
 	    	}
 	    	printEndStatement();
