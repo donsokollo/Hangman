@@ -12,7 +12,7 @@ import acm.util.*;
 
 import java.awt.*;
 
-public class TextModifier extends ConsoleProgram {
+public class Hangman extends ConsoleProgram {
 
 	/** number of lives that should be divisible by 7 to get a right sequence of animation!!*/
 	private static final int LIVES_NUMBER = 7;
